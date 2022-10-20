@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="main-container">
+    {% for r in response.results %}
+
+    <div class="cards">
+        <div class="card card-1">
+            <div class="card__icon"><i class="fas fa-bolt"></i></div>
+            <p class="card__exit"><i class="fas fa-times"></i></p> 
+            <h2 class="card__title"> {{r.title}}</h2>
+            <div class="card_body">{{r.description}}</div>
+            <p class="card__apply">
+                <a class="card__link" href="#">Add To Calendar <i class="fas fa-arrow-right"></i></a>
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+
+
+{% endblock %}
